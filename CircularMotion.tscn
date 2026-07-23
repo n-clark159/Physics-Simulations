@@ -1,0 +1,608 @@
+[gd_scene format=3 uid="uid://uiu38rapcwy5"]
+
+[ext_resource type="StyleBox" uid="uid://bqhi5ab2dl6xj" path="res://new_style_box_flat.tres" id="1_82nc8"]
+[ext_resource type="Script" uid="uid://bd4mul43f0gnf" path="res://circular_motion.gd" id="1_ro08o"]
+[ext_resource type="Texture2D" uid="uid://cib2h625idk16" path="res://icon.svg" id="1_veltp"]
+[ext_resource type="Script" uid="uid://dh23tubxwal7n" path="res://tempBack.gd" id="2_mxt11"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro08o"]
+bg_color = Color(0.13174233, 0.13174233, 0.1317423, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_km2ak"]
+bg_color = Color(0.1749846, 0.17498463, 0.17498457, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyxqx"]
+bg_color = Color(0.019925633, 0.019925632, 0.019925632, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0mrc2"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34509805, 0.34509805, 0.34509805, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2jabr"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.27022192, 0.27022192, 0.27022186, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.31925523, 0.31925526, 0.31925526, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_utdur"]
+radius = 34.058773
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_67tde"]
+size = Vector2(40, 40)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_utdur"]
+bg_color = Color(0.8627451, 0.52156866, 0, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_67tde"]
+bg_color = Color(0.8627451, 0.52156866, 0, 1)
+
+[node name="CircularMotion" type="Control" unique_id=1647414567]
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 1
+script = ExtResource("1_ro08o")
+
+[node name="layout" type="ReferenceRect" parent="." unique_id=2119254605]
+z_index = -1
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 647.0
+mouse_filter = 1
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="options" type="ReferenceRect" parent="layout" unique_id=1818255828]
+z_index = 10
+layout_mode = 0
+offset_top = 53.0
+offset_right = 294.0
+offset_bottom = 646.0
+mouse_filter = 1
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="Panel3" type="Panel" parent="layout/options" unique_id=550550539]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 269.0
+offset_bottom = 153.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_ro08o")
+
+[node name="Label" type="Label" parent="layout/options/Panel3" unique_id=1134191752]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 93.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "Formula"
+
+[node name="Label2" type="Label" parent="layout/options/Panel3" unique_id=1059232497]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 28.0
+offset_right = 160.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.8614721, 0.5222734, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 27
+text = "F = mv^2 / r"
+
+[node name="Label3" type="Label" parent="layout/options/Panel3" unique_id=279980321]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 61.0
+offset_right = 180.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "F = 2.0 * 3.0^2 / 1.5"
+
+[node name="Label" type="Label" parent="layout/options" unique_id=698859538]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 155.0
+offset_right = 95.0
+offset_bottom = 182.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "Variables"
+
+[node name="variable1" type="ReferenceRect" parent="layout/options" unique_id=307554635]
+z_index = 14
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 186.0
+offset_right = 294.0
+offset_bottom = 248.0
+mouse_filter = 1
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 0.0
+editor_only = false
+
+[node name="Label2" type="Label" parent="layout/options/variable1" unique_id=1853480272]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 15.0
+offset_right = 123.0
+offset_bottom = 42.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "Mass"
+
+[node name="Label4" type="Label" parent="layout/options/variable1" unique_id=1325521686]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 34.0
+offset_bottom = 47.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.8614721, 0.5222734, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 24
+text = "m"
+
+[node name="Panel2" type="Panel" parent="layout/options/variable1" unique_id=1158946410]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 5.0
+offset_right = 251.0
+offset_bottom = 36.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_km2ak")
+
+[node name="Label3" type="Label" parent="layout/options/variable1" unique_id=686280304]
+layout_mode = 0
+offset_left = 254.0
+offset_top = 9.0
+offset_right = 339.0
+offset_bottom = 36.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "kg"
+
+[node name="variable2" type="ReferenceRect" parent="layout/options" unique_id=337220292]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 248.0
+offset_right = 294.0
+offset_bottom = 310.0
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 0.0
+editor_only = false
+
+[node name="Label2" type="Label" parent="layout/options/variable2" unique_id=1346637758]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 15.0
+offset_right = 123.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "Velocity"
+
+[node name="Label4" type="Label" parent="layout/options/variable2" unique_id=609129500]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 34.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.8614721, 0.5222734, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 24
+text = "v"
+
+[node name="Panel2" type="Panel" parent="layout/options/variable2" unique_id=796176821]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 5.0
+offset_right = 252.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_km2ak")
+
+[node name="Label3" type="Label" parent="layout/options/variable2" unique_id=100773575]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 9.0
+offset_right = 340.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "m/s"
+
+[node name="variable3" type="ReferenceRect" parent="layout/options" unique_id=197177043]
+z_index = 10
+z_as_relative = false
+y_sort_enabled = true
+layout_mode = 0
+offset_left = 1.0
+offset_top = 310.0
+offset_right = 294.0
+offset_bottom = 372.0
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 0.0
+editor_only = false
+
+[node name="Label2" type="Label" parent="layout/options/variable3" unique_id=1938441671]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 15.0
+offset_right = 123.0
+offset_bottom = 42.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "Radius"
+
+[node name="Label4" type="Label" parent="layout/options/variable3" unique_id=678417066]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 10.0
+offset_right = 34.0
+offset_bottom = 47.0
+theme_override_colors/font_color = Color(0.8614721, 0.5222734, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 24
+text = "r"
+
+[node name="Panel2" type="Panel" parent="layout/options/variable3" unique_id=361033494]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 5.0
+offset_right = 252.0
+offset_bottom = 36.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_km2ak")
+
+[node name="Label3" type="Label" parent="layout/options/variable3" unique_id=648244995]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 9.0
+offset_right = 340.0
+offset_bottom = 36.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "m"
+
+[node name="Label2" type="Label" parent="layout/options" unique_id=1537385434]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 385.0
+offset_right = 99.0
+offset_bottom = 412.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "DISPLAY"
+
+[node name="ReferenceRect7" type="ReferenceRect" parent="layout/options" unique_id=1157515833]
+z_index = 10
+layout_mode = 0
+offset_left = 18.0
+offset_top = 379.0
+offset_right = 275.0
+offset_bottom = 379.0
+mouse_filter = 1
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="ReferenceRect6" type="ReferenceRect" parent="layout" unique_id=265553626]
+z_index = 10
+layout_mode = 0
+offset_right = 1150.0
+offset_bottom = 53.0
+mouse_filter = 1
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="ColorRect4" type="ColorRect" parent="layout" unique_id=2110308494]
+layout_mode = 0
+offset_left = 294.0
+offset_top = 53.0
+offset_right = 1151.0
+offset_bottom = 591.0
+mouse_filter = 1
+color = Color(0.15775332, 0.15775332, 0.15775326, 1)
+
+[node name="Icon" type="Sprite2D" parent="layout" unique_id=1374530238]
+position = Vector2(1321, 345)
+texture = ExtResource("1_veltp")
+
+[node name="ColorRect" type="ColorRect" parent="layout" unique_id=575831363]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 294.0
+offset_bottom = 647.0
+mouse_filter = 1
+color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="layout" unique_id=494564968]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 588.0
+offset_right = 1152.0
+offset_bottom = 647.0
+mouse_filter = 1
+color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="layout" unique_id=581408156]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1151.0
+offset_bottom = 53.0
+mouse_filter = 1
+color = Color(0.09019608, 0.09019608, 0.09019608, 1)
+
+[node name="Panel" type="Panel" parent="layout" unique_id=300898556]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 69.0
+offset_right = 1130.0
+offset_bottom = 156.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_lyxqx")
+
+[node name="Label" type="Label" parent="layout/Panel" unique_id=1906816088]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 119.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "F (net)"
+
+[node name="Panel2" type="Panel" parent="layout" unique_id=1500421738]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 114.0
+offset_right = 511.0
+offset_bottom = 201.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_lyxqx")
+
+[node name="Label" type="Label" parent="layout/Panel2" unique_id=167307562]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 119.0
+offset_bottom = 45.0
+theme_override_colors/font_color = Color(0.573792, 0.5737919, 0.5737919, 1)
+theme_override_font_sizes/font_size = 19
+text = "Vectors"
+
+[node name="Label" type="Label" parent="layout" unique_id=127179214]
+layout_mode = 0
+offset_left = 416.0
+offset_top = 5.0
+offset_right = 738.0
+offset_bottom = 47.0
+mouse_filter = 1
+theme_override_font_sizes/font_size = 30
+text = "This is Circular Motion"
+
+[node name="ReferenceRect7" type="ReferenceRect" parent="layout" unique_id=1730952579]
+z_index = 10
+layout_mode = 0
+offset_left = 294.0
+offset_top = 587.0
+offset_right = 1151.0
+offset_bottom = 646.0
+mouse_filter = 1
+border_color = Color(0.34407556, 0.3440758, 0.34407565, 1)
+border_width = 2.0
+editor_only = false
+
+[node name="Button" type="Button" parent="layout/ReferenceRect7" unique_id=1901615909]
+z_index = 7
+z_as_relative = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 8.0
+offset_right = 127.0
+offset_bottom = 45.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mrc2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2jabr")
+text = "<- Home"
+script = ExtResource("2_mxt11")
+
+[node name="Button" type="Button" parent="layout" unique_id=121157297]
+z_index = 7
+z_as_relative = false
+layout_mode = 0
+offset_left = 19.0
+offset_top = 8.0
+offset_right = 127.0
+offset_bottom = 45.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_0mrc2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2jabr")
+text = "<- Home"
+script = ExtResource("2_mxt11")
+
+[node name="Ball" type="RigidBody2D" parent="." unique_id=342638353]
+position = Vector2(865, 343)
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball" unique_id=1104132730]
+shape = SubResource("CircleShape2D_utdur")
+
+[node name="Pivot" type="StaticBody2D" parent="." unique_id=683062735]
+position = Vector2(737, 344)
+scale = Vector2(0.67999506, 0.71999997)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Pivot" unique_id=584168210]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pivot" unique_id=1564731526]
+shape = SubResource("RectangleShape2D_67tde")
+
+[node name="Line2D" type="Line2D" parent="." unique_id=1913020461]
+points = PackedVector2Array(737, 344, 866, 344)
+width = 5.0
+
+[node name="massSlider" type="HSlider" parent="." unique_id=225370447]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 273.0
+offset_right = 281.0
+offset_bottom = 303.0
+theme_override_styles/slider = ExtResource("1_82nc8")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_utdur")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_67tde")
+max_value = 20.0
+step = 0.5
+value = 2.0
+
+[node name="velocitySlider" type="HSlider" parent="." unique_id=1659925702]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 335.0
+offset_right = 281.0
+offset_bottom = 365.0
+theme_override_styles/slider = ExtResource("1_82nc8")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_utdur")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_67tde")
+max_value = 20.0
+step = 0.5
+value = 3.0
+
+[node name="radiusSlider" type="HSlider" parent="." unique_id=665921636]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 397.0
+offset_right = 281.0
+offset_bottom = 427.0
+theme_override_styles/slider = ExtResource("1_82nc8")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_utdur")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_67tde")
+min_value = 0.5
+max_value = 10.0
+step = 0.5
+value = 1.5
+
+[node name="massLabel" type="Label" parent="." unique_id=1868352582]
+z_index = 14
+layout_mode = 0
+offset_left = 167.0
+offset_top = 239.0
+offset_right = 246.0
+offset_bottom = 282.0
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.8569272, 0.8569273, 0.85692716, 1)
+theme_override_font_sizes/font_size = 19
+text = "2.00"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="velocityLabel" type="Label" parent="." unique_id=1156959032]
+z_index = 14
+layout_mode = 0
+offset_left = 168.0
+offset_top = 301.0
+offset_right = 247.0
+offset_bottom = 344.0
+theme_override_colors/font_color = Color(0.8569272, 0.8569273, 0.85692716, 1)
+theme_override_font_sizes/font_size = 19
+text = "3.00"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="radiusLabel" type="Label" parent="." unique_id=2109535264]
+z_index = 10
+layout_mode = 0
+offset_left = 168.0
+offset_top = 363.0
+offset_right = 247.0
+offset_bottom = 406.0
+theme_override_colors/font_color = Color(0.8569272, 0.8569273, 0.85692716, 1)
+theme_override_font_sizes/font_size = 19
+text = "1.50"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="forceLabel" type="Label" parent="." unique_id=1037293285]
+z_index = 9
+layout_mode = 0
+offset_left = 32.0
+offset_top = 156.0
+offset_right = 183.0
+offset_bottom = 193.0
+theme_override_colors/font_color = Color(0.8614721, 0.5222734, 1.347661e-06, 1)
+theme_override_font_sizes/font_size = 24
+text = "= 12.00 N"
+
+[connection signal="button_up" from="layout/ReferenceRect7/Button" to="." method="_on_button_button_up"]
